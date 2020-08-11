@@ -1,0 +1,14 @@
+<!-- app/views/restaurants/show.html.erb -->
+<h1><%= @task.title %></h1>
+<%= link_to "Edit task", edit_path(@task) %>
+<p>
+<% if @task.completed %>
+  <input type="checkbox" checked>
+<% else %>
+  <input type="checkbox">
+<% end %>
+<%= @task.details %>
+</p>
+<%= link_to "Back to tasks", tasks_path %>
+
+
